@@ -1,0 +1,13 @@
+div#insert-element, div.insert-element{
+    border: 1px solid red;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+}
+div.insert-element{
+    background-color: #f0f0f0;
+}
+
+div.jquery{
+    border: 2px solid green
+}
