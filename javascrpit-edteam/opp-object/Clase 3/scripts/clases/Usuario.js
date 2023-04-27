@@ -1,42 +1,57 @@
 
-export default class Usuario{
-    constructor(nombres, apellidos, correo, activo){
+export default class Usuario {
+    constructor(nombres, apellidos, correo, activo) {
         this.nombres = nombres,
-        this.apellidos = apellidos,
-        this.correo = correo,
-        this.activo = activo
+            this.apellidos = apellidos,
+            this.correo = correo,
+            this.activo = activo
+
+        if (this.nombres.length > 0) {
+            return 'Hola'
+        }
     }
 
-    presentarse(){
+
+    presentarse() {
+        let a = this.nommbres.length
         return `Hola soy ${this.nombres} ${this.apellidos}`
     }
-    getApellidos(){
-        return this.apellidos
+    getApellidos() {
+        return {
+            card: {
+                nombre: this.nombres.length
+            }
+        }
     }
-    getNombres(){
+    getNombres() {
         return this.nombres
     }
-    getCorreo(){
+    getCorreo() {
         return this.correo
     }
-    getActivo(){
+    getActivo() {
         return this.activo
     }
 
-    setApellidos(apellidos){
+    setApellidos(apellidos) {
         this.apellidos = apellidos
     }
-    setNombres(nombres){
+    setNombres(nombres) {
         this.nombres = nombres
     }
-    setCorreo(correo){
+    setCorreo(correo) {
         this.correo = correo
     }
-    setActivo(activo){
+    setActivo(activo) {
         this.activo = activo
     }
 
     //Metodos getters y los setters
     //Get = Obtener
     //Set = Establecer
+}
+
+function substring() {
+    let a = this.nombres.length
+    return this.nombres.trim().substr(0, a)
 }

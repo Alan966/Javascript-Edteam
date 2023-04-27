@@ -1,22 +1,22 @@
-// const usuario1 = {
-//     // Atributos del objeto
-//     nombres: "Beto Junior",
-//     apellidos: "Quispe Mamani",
-//     edad: 29,
-//     hermanos: ["Beto", "Junior", "Mamani"],
-//     correo: "betoed.team",
-//     activo: true,
-//     //Metodos del objeto
-//     presentarse(){
-//         // This hace referencia al objeto que esta ejecutando el metodo
-//         console.log(`Hola soy ${this.nombres} ${this.apellidos}`)
-//     },
-//     whoIsYourFather(){
-//         console.log(`Mi padre es ${this.padre.nombre}`)
-//     }
-//  }
+const usuario1 = {
+    // Atributos del objeto
+    nombres: "Beto Junior",
+    apellidos: "Quispe Mamani",
+    edad: 29,
+    hermanos: ["Beto", "Junior", "Mamani"],
+    correo: "betoed.team",
+    activo: true,
+    //Metodos del objeto
+    presentarse() {
+        // This hace referencia al objeto que esta ejecutando el metodo
+        console.log(`Hola soy ${this.nombres} ${this.apellidos}`)
+    },
+    whoIsYourFather() {
+        console.log(`Mi padre es ${this.padre.nombre}`)
+    }
+}
 
-//  console.log(usuario1)
+console.log(usuario1)
 
 
 // Funcion constructora
@@ -27,40 +27,40 @@
 //     this.correo = correo;
 //     this.activo = activo;
 // }
-class Usuario{
-    constructor(nombres, apellidos, correo, activo){
+class Usuario {
+    constructor(nombres, apellidos, correo, activo) {
         this.nombres = nombres,
-        this.apellidos = apellidos,
-        this.correo = correo,
-        this.activo = activo
+            this.apellidos = apellidos,
+            this.correo = correo,
+            this.activo = activo
     }
 
-    presentarse(){
+    presentarse() {
         return `Hola soy ${this.nombres} ${this.apellidos}`
     }
-    getApellidos(){
+    getApellidos() {
         return this.apellidos
     }
-    getNombres(){
+    getNombres() {
         return this.nombres
     }
-    getCorreo(){
+    getCorreo() {
         return this.correo
     }
-    getActivo(){
+    getActivo() {
         return this.activo
     }
 
-    setApellidos(apellidos){
+    setApellidos(apellidos) {
         this.apellidos = apellidos
     }
-    setNombres(nombres){
+    setNombres(nombres) {
         this.nombres = nombres
     }
-    setCorreo(correo){
+    setCorreo(correo) {
         this.correo = correo
     }
-    setActivo(activo){
+    setActivo(activo) {
         this.activo = activo
     }
 
@@ -71,22 +71,22 @@ class Usuario{
 
 //Herencia
 //Poder extender las caracteristicas de una clase a otra
-class Profesor extends Usuario{
-    constructor(nombres, apellidos, correo, activo, cursosDictados, calificacion){
+class Profesor extends Usuario {
+    constructor(nombres, apellidos, correo, activo, cursosDictados, calificacion) {
         super(nombres, apellidos, correo, activo)
         this.cursosDictados = cursosDictados
         this.calificacion = calificacion
     }
 }
 
-class Alumno extends Usuario{
-    constructor(nombres, apellidos, correo, activo, cursosTomados){
+class Alumno extends Usuario {
+    constructor(nombres, apellidos, correo, activo, cursosTomados) {
         super(nombres, apellidos, correo, activo)
         this.cursosTomados = cursosTomados
     }
 }
 
-let beto = new Alumno("Beto","Quiroga", "Correo", true, ["REACT", "HTML"], 10);  //Instanciar un objeto
+let beto = new Alumno("Beto", "Quiroga", "Correo", true, ["REACT", "HTML"], 10);  //Instanciar un objeto
 let alexys = new Profesor("Alexys", "Lozada", "alexys@ed.team", true, ["BD", "JAVA"], 10)
 
 //beto y alexys son Instancias de la clase Usuario
