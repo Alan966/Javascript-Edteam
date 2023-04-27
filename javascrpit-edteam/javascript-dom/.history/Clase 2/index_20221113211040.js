@@ -1,6 +1,0 @@
-//Eventos
-/**
- * Eventos
- * addEventListener()
- * onEvent
- */
